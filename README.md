@@ -4,13 +4,13 @@ I was responsible for the frontend of the application and also the database desi
 We developed this application using: 
 
 Servers JEE– Tomcat.<br>
-Database – MySql
-REST application.
-Separate MVC application.
-Java(As the Main Backend Language)
-Maven (As our Building Tool)
-JSP and Servlets
-HTML5, CSS3 and JavaScript
+Database – MySql<br>
+REST application.<br>
+Separate MVC application.<br>
+Java(As the Main Backend Language) <br>
+Maven (As our Building Tool) <br>
+JSP and Servlets <br>
+HTML5, CSS3 and JavaScript <br>
 
 [SystemsProject_OnlineBakery_V02.pdf](https://github.com/XolaniLan/ToPieForBakeryApplication/files/12437092/SystemsProject_OnlineBakery_V02.pdf)
 
