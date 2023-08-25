@@ -3,7 +3,7 @@ Bakery Management System - I collaborated with 4 of my teammate to develop this 
 I was responsible for the frontend of the application and also the database design and implementation of it.
 We developed this application using: 
 
-Servers JEE– Tomcat.
+Servers JEE– Tomcat.<br>
 Database – MySql
 REST application.
 Separate MVC application.
