@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Link to css  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link to Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+    <!-- Nav bar ********************************************************************************************-->
+    <header>
+        <!-- Nav******************************************************************************************** -->
+        <div class="nav container">
+            <!-- Logo*************************************************************************************** -->
+            <a href="#" class="logo">To Pie For</a>
+            <!-- UserProfle Icons*************************************************************************** -->
+            <a href="C:\Users\Train\Desktop\2023-06-12\2023-06-12\ShoppingCart\Public\AccountSettings.html">
+                <i class='bx bx-user' id="user-icon"></i>
+            </a>
+            <!-- Cart Icons********************************************************************************* -->
+            <i class='bx bx-cart-alt' id="cart-icon" data-quantity="0"></i>
+            <!-- Cart ********************************************************************************* -->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!-- Content -->
+                <div class="cart-content">
+                    <!-- <div class="cart-box">
+                           
+                    </div> -->
+                </div>
+                <!-- Total -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">R0.00</div>
+                </div>
+                <!-- Buy Button  -->
+                <a href="C:\Users\Train\Desktop\2023-06-12\2023-06-12\ShoppingCart\Public\checkout.html">
+                    <button type="button" class="btn-buy">Buy</button>
+                </a>
+                <!-- Close Cart -->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Products -->
+    <section class="shop container">
+
+        <h2 class="section-title">Shop Products</h2>
+        <!-- ------------------------------------------------------------------ -->
+        <div class="control">
+
+            <div class="btn-group">
+                <button class="btnn btn-clicked" data-filter="all">All</button>
+                <button class="btnn" data-filter="pastries">Pancakes</button>
+                <button class="btnn" data-filter="cake">Cakes</button>
+                <button class="btnn" data-filter="brownies">Brownies</button>
+                <button class="btnn" data-filter="cookies">Cookies</button>
+                <button class="btnn" data-filter="breads">Breads</button>
+            </div>
+
+            <input type="text" placeholder="Search Products" id="search">
+        </div>
+        <!-- ------------------------------------------------------------------ -->
+
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- Box 1  -->
+            <div class="product-box" data-item="cake">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Fghe-6UsCeWkRdI8kdo5-bqVvgED3dPM9KC-1wm4_Sgo4rQ3WNT4rrlNdW95EZdGseEY_fA1ck4mv6d7uKghpXHjPoNQtogVqhe2Q6aLMx_T2-XhP-2nHC_GSZ38lIRGR68nRb7C_CUCI2Boveb_l5Wcni2oWPGokKKWt2FwQ_9PAw2zn0Rn0dA0/s320/Chocolate%20Cake.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Chocolate Cake</h2>
+                <span class="price">R30.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn"></ion-icon>
+            </div>
+            <!-- Box 2  -->
+            <div class="product-box" data-item="cake">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Fghe-6UsCeWkRdI8kdo5-bqVvgED3dPM9KC-1wm4_Sgo4rQ3WNT4rrlNdW95EZdGseEY_fA1ck4mv6d7uKghpXHjPoNQtogVqhe2Q6aLMx_T2-XhP-2nHC_GSZ38lIRGR68nRb7C_CUCI2Boveb_l5Wcni2oWPGokKKWt2FwQ_9PAw2zn0Rn0dA0/s320/Chocolate%20Cake.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Cocao Choc</h2>
+                <span class="price">R70.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn1"></ion-icon>
+            </div>
+            <!-- Box 4  -->
+            <div class="product-box" data-item="cake">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Fghe-6UsCeWkRdI8kdo5-bqVvgED3dPM9KC-1wm4_Sgo4rQ3WNT4rrlNdW95EZdGseEY_fA1ck4mv6d7uKghpXHjPoNQtogVqhe2Q6aLMx_T2-XhP-2nHC_GSZ38lIRGR68nRb7C_CUCI2Boveb_l5Wcni2oWPGokKKWt2FwQ_9PAw2zn0Rn0dA0/s320/Chocolate%20Cake.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Cake</h2>
+                <span class="price">R130.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn2"></ion-icon>
+            </div>
+            <!-- Box 5  -->
+            <div class="product-box" data-item="cake">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Fghe-6UsCeWkRdI8kdo5-bqVvgED3dPM9KC-1wm4_Sgo4rQ3WNT4rrlNdW95EZdGseEY_fA1ck4mv6d7uKghpXHjPoNQtogVqhe2Q6aLMx_T2-XhP-2nHC_GSZ38lIRGR68nRb7C_CUCI2Boveb_l5Wcni2oWPGokKKWt2FwQ_9PAw2zn0Rn0dA0/s320/Chocolate%20Cake.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Black Forest</h2>
+                <span class="price">R98.70</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn3"></ion-icon>
+            </div>
+            <!-- Box 6  -->
+            <div class="product-box" data-item="breads">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrQuE2JJav6Su6PGpcSln8_q_AM2D-QmaB56ZIRVveD858MG4PmWw6H7D5IpFDajcj-5RgTNPHla5Pq1pr8AyV650NtYP4BTMix0npxNov_FxOTeSDnVc9zBrf1_qA3K1NHK-qwdRYZ3Hea-Q8S8mAtdhk2TrksKPsCwcVAhImvK-hxheUq9pnzhAp/s320/white%20loaf%20bread.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Multigrain</h2>
+                <span class="price">R23.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn4"></ion-icon>
+            </div>
+            <!-- Box 7  -->
+            <div class="product-box" data-item="breads">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrQuE2JJav6Su6PGpcSln8_q_AM2D-QmaB56ZIRVveD858MG4PmWw6H7D5IpFDajcj-5RgTNPHla5Pq1pr8AyV650NtYP4BTMix0npxNov_FxOTeSDnVc9zBrf1_qA3K1NHK-qwdRYZ3Hea-Q8S8mAtdhk2TrksKPsCwcVAhImvK-hxheUq9pnzhAp/s320/white%20loaf%20bread.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Sourdough Bread</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn5"></ion-icon>
+            </div>
+            <!-- Box 8 -->
+            <!-- Box 9 -->
+            <div class="product-box" data-item="breads">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrQuE2JJav6Su6PGpcSln8_q_AM2D-QmaB56ZIRVveD858MG4PmWw6H7D5IpFDajcj-5RgTNPHla5Pq1pr8AyV650NtYP4BTMix0npxNov_FxOTeSDnVc9zBrf1_qA3K1NHK-qwdRYZ3Hea-Q8S8mAtdhk2TrksKPsCwcVAhImvK-hxheUq9pnzhAp/s320/white%20loaf%20bread.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Wheat Bread</h2>
+                <span class="price">R27.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn7"></ion-icon>
+            </div>
+            <!-- Box 6  -->
+            <div class="product-box" data-item="breads">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrQuE2JJav6Su6PGpcSln8_q_AM2D-QmaB56ZIRVveD858MG4PmWw6H7D5IpFDajcj-5RgTNPHla5Pq1pr8AyV650NtYP4BTMix0npxNov_FxOTeSDnVc9zBrf1_qA3K1NHK-qwdRYZ3Hea-Q8S8mAtdhk2TrksKPsCwcVAhImvK-hxheUq9pnzhAp/s320/white%20loaf%20bread.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Brown Bread</h2>
+                <span class="price">R20.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn8"></ion-icon>
+            </div>
+            <!-- Box 7  -->
+            <div class="product-box" data-item="breads">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrQuE2JJav6Su6PGpcSln8_q_AM2D-QmaB56ZIRVveD858MG4PmWw6H7D5IpFDajcj-5RgTNPHla5Pq1pr8AyV650NtYP4BTMix0npxNov_FxOTeSDnVc9zBrf1_qA3K1NHK-qwdRYZ3Hea-Q8S8mAtdhk2TrksKPsCwcVAhImvK-hxheUq9pnzhAp/s320/white%20loaf%20bread.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">White Bread</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn9"></ion-icon>
+            </div>
+            <!-- Box 8 -->
+            <div class="product-box" data-item="cookies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilzSCqsmA0DMUw23ltnzi_u7YH0o5qtZfqvpIK30jJ9qQ1vtT9oYZAqlEXC-EUqjm72SVGAOE0nIIKCJkXGFRxCkQfN9qMz-yuDNieTMHDeUrMmvMxblbqY8DBAbPo4qSJRI1VIDukdB4QRInXWfMK6Mfub3ePWRpIbqJAIknvEExKw5a2LNauZX_v/s320/Biscuit.jpg"
+                    alt="" class="product-img " />     
+                <h2 class="product-title">Bar Cookies</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn10"></ion-icon>
+            </div>
+            <!-- Box 9 -->
+            <div class="product-box" data-item="cookies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilzSCqsmA0DMUw23ltnzi_u7YH0o5qtZfqvpIK30jJ9qQ1vtT9oYZAqlEXC-EUqjm72SVGAOE0nIIKCJkXGFRxCkQfN9qMz-yuDNieTMHDeUrMmvMxblbqY8DBAbPo4qSJRI1VIDukdB4QRInXWfMK6Mfub3ePWRpIbqJAIknvEExKw5a2LNauZX_v/s320/Biscuit.jpg"
+                    alt="" class="product-img " />     
+                <h2 class="product-title">Drop Cookies</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn10"></ion-icon>
+            </div>
+            <div class="product-box" data-item="cookies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilzSCqsmA0DMUw23ltnzi_u7YH0o5qtZfqvpIK30jJ9qQ1vtT9oYZAqlEXC-EUqjm72SVGAOE0nIIKCJkXGFRxCkQfN9qMz-yuDNieTMHDeUrMmvMxblbqY8DBAbPo4qSJRI1VIDukdB4QRInXWfMK6Mfub3ePWRpIbqJAIknvEExKw5a2LNauZX_v/s320/Biscuit.jpg"
+                    alt="" class="product-img " />     
+                <h2 class="product-title">Rolled Cookies</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn10"></ion-icon>
+            </div>
+            <div class="product-box" data-item="cookies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilzSCqsmA0DMUw23ltnzi_u7YH0o5qtZfqvpIK30jJ9qQ1vtT9oYZAqlEXC-EUqjm72SVGAOE0nIIKCJkXGFRxCkQfN9qMz-yuDNieTMHDeUrMmvMxblbqY8DBAbPo4qSJRI1VIDukdB4QRInXWfMK6Mfub3ePWRpIbqJAIknvEExKw5a2LNauZX_v/s320/Biscuit.jpg"
+                    alt="" class="product-img " />     
+                <h2 class="product-title">Refrigerator Cookies</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn10"></ion-icon>
+            </div>
+            <div class="product-box" data-item="cookies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilzSCqsmA0DMUw23ltnzi_u7YH0o5qtZfqvpIK30jJ9qQ1vtT9oYZAqlEXC-EUqjm72SVGAOE0nIIKCJkXGFRxCkQfN9qMz-yuDNieTMHDeUrMmvMxblbqY8DBAbPo4qSJRI1VIDukdB4QRInXWfMK6Mfub3ePWRpIbqJAIknvEExKw5a2LNauZX_v/s320/Biscuit.jpg"
+                    alt="" class="product-img " />     
+                <h2 class="product-title">Pressed</h2>
+                <span class="price">R19.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn10"></ion-icon>
+            </div>
+            <!-- Box 1  -->
+            <div class="product-box" data-item="pastries">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->                
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitpalpeU5FDkJErqFQyUwxF68Y1fGH-ZxoWKG-MfsOnlPjd2Xn0GGZ3-HwSv0SjjPR6TIeW0WL0AlyFbUVR39o6KkMTOYUcYIOu5a8gLxsXEs6iZdOk5aMa6wE7bX9tEkpMaN7dhDUqxrazrWN4Z_onD_6ijUYOcxjTjxti7Px4I26cUgp03SqB-aJ/s320/pancakes-with-strawberries-banana-chocolate-cream.jpg"
+                alt="" class="product-img" />    
+                <h2 class="product-title">blueberry</h2>
+                <span class="price">R30.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn12"></ion-icon>
+            </div>
+            <div class="product-box" data-item="pastries">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->                
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitpalpeU5FDkJErqFQyUwxF68Y1fGH-ZxoWKG-MfsOnlPjd2Xn0GGZ3-HwSv0SjjPR6TIeW0WL0AlyFbUVR39o6KkMTOYUcYIOu5a8gLxsXEs6iZdOk5aMa6wE7bX9tEkpMaN7dhDUqxrazrWN4Z_onD_6ijUYOcxjTjxti7Px4I26cUgp03SqB-aJ/s320/pancakes-with-strawberries-banana-chocolate-cream.jpg"
+                alt="" class="product-img" />    
+                <h2 class="product-title">Scotch</h2>
+                <span class="price">R30.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn12"></ion-icon>
+            </div>
+            <!-- Box 2  -->
+            <div class="product-box" data-item="pastries">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitpalpeU5FDkJErqFQyUwxF68Y1fGH-ZxoWKG-MfsOnlPjd2Xn0GGZ3-HwSv0SjjPR6TIeW0WL0AlyFbUVR39o6KkMTOYUcYIOu5a8gLxsXEs6iZdOk5aMa6wE7bX9tEkpMaN7dhDUqxrazrWN4Z_onD_6ijUYOcxjTjxti7Px4I26cUgp03SqB-aJ/s320/pancakes-with-strawberries-banana-chocolate-cream.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Easy plain</h2>
+                <span class="price">R70.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn13"></ion-icon>
+            </div>
+            
+            <div class="product-box" data-item="pastries">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitpalpeU5FDkJErqFQyUwxF68Y1fGH-ZxoWKG-MfsOnlPjd2Xn0GGZ3-HwSv0SjjPR6TIeW0WL0AlyFbUVR39o6KkMTOYUcYIOu5a8gLxsXEs6iZdOk5aMa6wE7bX9tEkpMaN7dhDUqxrazrWN4Z_onD_6ijUYOcxjTjxti7Px4I26cUgp03SqB-aJ/s320/pancakes-with-strawberries-banana-chocolate-cream.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Fluffy</h2>
+                <span class="price">R70.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn13"></ion-icon>
+            </div>
+            <div class="product-box" data-item="pastries">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitpalpeU5FDkJErqFQyUwxF68Y1fGH-ZxoWKG-MfsOnlPjd2Xn0GGZ3-HwSv0SjjPR6TIeW0WL0AlyFbUVR39o6KkMTOYUcYIOu5a8gLxsXEs6iZdOk5aMa6wE7bX9tEkpMaN7dhDUqxrazrWN4Z_onD_6ijUYOcxjTjxti7Px4I26cUgp03SqB-aJ/s320/pancakes-with-strawberries-banana-chocolate-cream.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title"> Choc-Stuffed</h2>
+                <span class="price">R70.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn13"></ion-icon>
+            </div>
+            <!-- Box 4  -->
+            <div class="product-box" data-item="cookies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->              
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilzSCqsmA0DMUw23ltnzi_u7YH0o5qtZfqvpIK30jJ9qQ1vtT9oYZAqlEXC-EUqjm72SVGAOE0nIIKCJkXGFRxCkQfN9qMz-yuDNieTMHDeUrMmvMxblbqY8DBAbPo4qSJRI1VIDukdB4QRInXWfMK6Mfub3ePWRpIbqJAIknvEExKw5a2LNauZX_v/s320/Biscuit.jpg"
+                    alt="" class="product-img " />
+                <h2 class="product-title">Biscuit</h2>
+                <span class="price">R20.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn14"></ion-icon>
+            </div>
+            <!-- Box 4  -->
+            <div class="product-box" data-item="brownies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->              
+                    <img src="th.jpg"
+                    alt="brownie" class="product-img " />
+                <h2 class="product-title">Cakey</h2>
+                <span class="price">R20.58</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn14"></ion-icon>
+            </div>
+            <div class="product-box" data-item="brownies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->              
+                    <img src="th.jpg"
+                    alt="brownie" class="product-img " />
+                <h2 class="product-title">fudgy</h2>
+                <span class="price">R27.90</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn14"></ion-icon>
+            </div>
+            <div class="product-box" data-item="brownies">
+                <!-- Stripe needs images that are online on local server it will not show in stripe checkout page we have to upload online -->              
+                    <img src="Downloads/chocolate-brown.jpg"
+                    alt="brownie" class="product-img " />
+                <h2 class="product-title">chewy</h2>
+                <span class="price">R29.80</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+                <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn14"></ion-icon>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------------------------------- The Modal 1 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 1 End--------------------------------->
+    <!----------------------------------------------- The Modal 2 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close1">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 2 End--------------------------------->
+    <!----------------------------------------------- The Modal 3 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close2">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 3 End--------------------------------->
+    <!----------------------------------------------- The Modal 4 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close3">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 4 End--------------------------------->
+    <!----------------------------------------------- The Modal 5 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close4">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 5 End--------------------------------->
+    <!----------------------------------------------- The Modal 6 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close5">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 6 End--------------------------------->
+    <!----------------------------------------------- The Modal 7 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close6">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 7 End--------------------------------->
+    <!----------------------------------------------- The Modal 8 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close7">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 8 End--------------------------------->
+    <!----------------------------------------------- The Modal 9 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close8">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 9 End--------------------------------->
+    <!----------------------------------------------- The Modal 10 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close9">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 10 End--------------------------------->
+    <!----------------------------------------------- The Modal 11 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close10">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 11 End--------------------------------->
+    <!----------------------------------------------- The Modal 12 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close11">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 12 End--------------------------------->
+    <!----------------------------------------------- The Modal 13 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close12">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 13 End--------------------------------->
+    <!----------------------------------------------- The Modal 14 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close13">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 14 End--------------------------------->
+    <!----------------------------------------------- The Modal 15 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close14">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!----------------------------------------------- The Modal 15 End--------------------------------->
+    <!----------------------------------------------- The Modal 16 Start--------------------------------->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close15">&times;</span>
+                <h2>Ingredients</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Nutritional Value</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Link to Js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
